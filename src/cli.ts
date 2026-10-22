@@ -632,6 +632,7 @@ grouped(program.command("build"), GROUP.setup)
       const c = await engine.init(dir, {
         extensions: opts.extensions,
         onlyDirs,
+        concurrency,
         synthConcurrency,
         onProgress: ({ phase, index, total, file }) =>
           process.stderr.write(
